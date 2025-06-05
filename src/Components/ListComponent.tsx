@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 
 const ListComponent = () => {
   const navigate = useNavigate();
+
   const handleProgressHeaderClick = () => {
     navigate("/detail");
   };
@@ -37,19 +38,19 @@ const ListComponent = () => {
 
   const tableColumns = [
     {
-      Header: "Name",
-      accessor: "name", // String-based value accessors!
+      Header: "Nome",
+      accessor: "name",
     },
     {
-      Header: "Age",
+      Header: "Idade",
       accessor: "age",
     },
     {
-      Header: "Friend Name",
+      Header: "Nome do Amigo",
       accessor: "friend.name",
     },
     {
-      Header: "Friend Age",
+      Header: "Idade do Amigo",
       accessor: "friend.age",
     },
   ];
@@ -59,8 +60,8 @@ const ListComponent = () => {
       <Card
         header={
           <CardHeader
-            titleText="Progress"
-            subtitleText="List"
+            titleText="Progresso"
+            subtitleText="Clique aqui para ver detalhes"
             avatar={<Icon name={listIcon} />}
             interactive
             onClick={handleProgressHeaderClick}
@@ -70,12 +71,12 @@ const ListComponent = () => {
         <ListItemStandard
           additionalText="finished"
           additionalTextState={ValueState.Positive}>
-          Activity 1
+          Atividade 1
         </ListItemStandard>
         <ListItemStandard
           additionalText="failed"
           additionalTextState={ValueState.Negative}>
-          Activity 2
+          Atividade 2
         </ListItemStandard>
         <ListItemCustom>
           <FlexBox
@@ -84,10 +85,10 @@ const ListComponent = () => {
             style={{ paddingBlock: "var(--sapContent_Space_S)" }}>
             <FlexBox justifyContent={FlexBoxJustifyContent.SpaceBetween}>
               <Text style={{ fontSize: "var(--sapFontLargeSize)" }}>
-                Activity 3
+                Atividade 3
               </Text>
               <Text style={{ color: "var(--sapCriticalTextColor)" }}>
-                in progress
+                Em progresso
               </Text>
             </FlexBox>
             <ProgressIndicator value={89} valueState={ValueState.Positive} />
@@ -100,10 +101,10 @@ const ListComponent = () => {
             style={{ paddingBlock: "var(--sapContent_Space_S)" }}>
             <FlexBox justifyContent={FlexBoxJustifyContent.SpaceBetween}>
               <Text style={{ fontSize: "var(--sapFontLargeSize)" }}>
-                Activity 4
+                Atividade 4
               </Text>
               <Text style={{ color: "var(--sapCriticalTextColor)" }}>
-                in progress
+                Em progresso
               </Text>
             </FlexBox>
             <ProgressIndicator
@@ -117,7 +118,7 @@ const ListComponent = () => {
       <Card
         header={
           <CardHeader
-            titleText="AnalyticalTable"
+            titleText="Tabela Analitica"
             avatar={<Icon name={tableViewIcon} />}
           />
         }

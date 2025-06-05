@@ -48,10 +48,6 @@ const MyApp = () => {
   const contentTitle =
     toggleCharts === "lineChart" ? "Line Chart" : "Bar Chart";
 
-  const handleHeaderClick = () => {
-    alert("Header clicked");
-  };
-
   const handleHeaderClickGrafic = () => {
     if (toggleCharts === "lineChart") {
       setLoading(true);
@@ -72,26 +68,6 @@ const MyApp = () => {
     <div>
       <div>
         <ListComponent />
-      </div>
-      <div>
-        <Card
-          header={
-            <CardHeader
-              titleText="Titulo"
-              interactive
-              onClick={handleHeaderClick}
-            />
-          }
-          style={{ width: "90%", margin: "25px auto", display: "block" }}>
-          <Text
-            style={{
-              color: "red",
-              padding: "var(--sapContent_Space_S)",
-            }}>
-            Conteudo dentro da TAG Text do UI com estilização no component e
-            interação
-          </Text>
-        </Card>
       </div>
       <div>
         <Card
